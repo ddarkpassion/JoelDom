@@ -10,7 +10,7 @@ client = discord.Client()
 
 sad_words = ["sad", "depressed", "unhappy", "angry", "miserable", "depressing"]
 
-starter_encouragements = [
+encouragements = [
   "Cheer up!",
   "Hang in there.",
   "You are a great person / bot!"
@@ -44,7 +44,7 @@ async def on_message(message):
     await message.channel.send(quote)
 
   if any(word in msg for word in sad_words):
-      await message.channel.send(random.choice(starter_encouragements))
+      await message.channel.send(random.choice(encouragements))
 
 
 
